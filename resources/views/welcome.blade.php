@@ -403,7 +403,7 @@
                         <h4 class="font-semibold mb-4">Created By</h4>
                         <p class="text-neutral-400">
                             <a href="https://festa.design/" target="_blank" class="text-primary-400 hover:text-primary-300 underline">Festa Design Studio</a><br>
-                            For Civic Hack DC 2024
+                            For Civic Hack DC 2025
                         </p>
                     </div>
                     <div>
