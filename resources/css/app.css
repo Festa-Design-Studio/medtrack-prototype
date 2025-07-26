@@ -1,0 +1,281 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* MedTrack Design System */
+@import "./design-system.css";
+
+/* Custom Base Styles */
+@layer base {
+    html {
+        font-family: "Inter", "Figtree", system-ui, sans-serif;
+    }
+
+    body {
+        font-size: 1.125rem; /* 18px - Senior-friendly base */
+        line-height: 1.6;
+        color: #111827; /* neutral-900 */
+        background-color: #f9fafb; /* neutral-50 */
+    }
+
+    /* Ensure all interactive elements meet touch target requirements */
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Focus styles for accessibility */
+    *:focus {
+        outline: 2px solid #005fcc; /* primary-500 */
+        outline-offset: 2px;
+    }
+}
+
+/* Custom Component Styles */
+@layer components {
+    /* Card Component */
+    .card {
+        @apply bg-white border border-neutral-200 rounded-xl shadow-sm overflow-hidden;
+    }
+
+    /* Button Components */
+    .btn-primary {
+        @apply min-h-touch min-w-touch px-lg py-md bg-primary-500 hover:bg-primary-600 text-white text-base font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors inline-flex items-center justify-center;
+    }
+
+    .btn-secondary {
+        @apply min-h-touch min-w-touch px-lg py-md bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-base font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 transition-colors inline-flex items-center justify-center;
+    }
+
+    .btn-success {
+        @apply min-h-touch min-w-touch px-lg py-md bg-success-500 hover:bg-success-600 text-white text-base font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-success-500 focus:ring-offset-2 transition-colors inline-flex items-center justify-center;
+    }
+
+    .btn-danger {
+        @apply min-h-touch min-w-touch px-lg py-md bg-error-500 hover:bg-error-600 text-white text-base font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-error-500 focus:ring-offset-2 transition-colors inline-flex items-center justify-center;
+    }
+
+    /* Form Components */
+    .form-input {
+        @apply w-full min-h-touch px-md py-md border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-lg transition-colors;
+    }
+
+    .form-label {
+        @apply block text-lg font-medium text-neutral-900 mb-sm;
+    }
+
+    .form-help {
+        @apply text-sm text-neutral-600 mt-xs;
+    }
+
+    /* Alert Components */
+    .alert {
+        @apply p-md rounded-lg mb-lg flex items-center;
+    }
+
+    .alert-success {
+        @apply bg-success-50 border border-success-200 text-success-800;
+    }
+
+    .alert-warning {
+        @apply bg-warning-50 border border-warning-200 text-warning-800;
+    }
+
+    .alert-error {
+        @apply bg-error-50 border border-error-200 text-error-800;
+    }
+
+    .alert-info {
+        @apply bg-primary-50 border border-primary-200 text-primary-800;
+    }
+
+    /* Navigation Components */
+    .nav-link {
+        @apply inline-flex items-center px-xs pt-xs text-lg font-medium text-neutral-900 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 min-h-touch transition-colors;
+    }
+
+    .nav-link.active {
+        @apply text-primary-600 border-b-2 border-primary-600;
+    }
+}
+
+/* Custom Utility Styles */
+@layer utilities {
+    /* Senior-friendly text sizes */
+    .text-senior {
+        font-size: 1.125rem; /* 18px */
+        line-height: 1.75;
+    }
+
+    .text-senior-lg {
+        font-size: 1.25rem; /* 20px */
+        line-height: 1.875;
+    }
+
+    .text-senior-xl {
+        font-size: 1.5rem; /* 24px */
+        line-height: 2.25;
+    }
+
+    /* Senior-friendly colors */
+    .text-senior-text {
+        color: #111827; /* neutral-900 */
+    }
+
+    .text-senior-text-light {
+        color: #374151; /* neutral-700 */
+    }
+
+    .text-senior-primary {
+        color: #1e40af; /* Blue-700 */
+    }
+
+    .text-senior-success {
+        color: #166534; /* Green-800 */
+    }
+
+    .text-senior-warning {
+        color: #ca8a04; /* Yellow-600 */
+    }
+
+    .text-senior-danger {
+        color: #dc2626; /* Red-600 */
+    }
+
+    /* Touch target utilities */
+    .min-h-touch {
+        min-height: 44px;
+    }
+
+    .min-w-touch {
+        min-width: 44px;
+    }
+
+    .min-h-touch-lg {
+        min-height: 48px;
+    }
+
+    .min-w-touch-lg {
+        min-width: 48px;
+    }
+
+    /* Spacing utilities */
+    .space-y-xs > * + * {
+        margin-top: 4px;
+    }
+
+    .space-y-sm > * + * {
+        margin-top: 8px;
+    }
+
+    .space-y-md > * + * {
+        margin-top: 16px;
+    }
+
+    .space-y-lg > * + * {
+        margin-top: 24px;
+    }
+
+    .space-y-xl > * + * {
+        margin-top: 32px;
+    }
+
+    .space-y-2xl > * + * {
+        margin-top: 40px;
+    }
+
+    .space-y-3xl > * + * {
+        margin-top: 48px;
+    }
+
+    /* Gap utilities */
+    .gap-xs {
+        gap: 4px;
+    }
+
+    .gap-sm {
+        gap: 8px;
+    }
+
+    .gap-md {
+        gap: 16px;
+    }
+
+    .gap-lg {
+        gap: 24px;
+    }
+
+    .gap-xl {
+        gap: 32px;
+    }
+
+    .gap-2xl {
+        gap: 40px;
+    }
+
+    .gap-3xl {
+        gap: 48px;
+    }
+}
+
+/* High Contrast Mode Support */
+.high-contrast {
+    --color-primary-500: #000000;
+    --color-primary-600: #000000;
+    --color-neutral-900: #000000;
+    --color-neutral-800: #000000;
+    --color-neutral-700: #000000;
+    --color-neutral-600: #000000;
+    --color-neutral-500: #000000;
+    --color-neutral-400: #000000;
+    --color-neutral-300: #000000;
+    --color-neutral-200: #000000;
+    --color-neutral-100: #ffffff;
+    --color-neutral-50: #ffffff;
+}
+
+.high-contrast * {
+    border-color: #000000 !important;
+    border-width: 2px !important;
+}
+
+.high-contrast .bg-white {
+    background-color: #ffffff !important;
+}
+
+.high-contrast .text-neutral-900,
+.high-contrast .text-neutral-800,
+.high-contrast .text-neutral-700,
+.high-contrast .text-neutral-600,
+.high-contrast .text-neutral-500 {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+/* Accessibility Enhancements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
